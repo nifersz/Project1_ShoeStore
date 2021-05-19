@@ -1,0 +1,54 @@
+# Old-style IDEA project files #
+*.ipr
+*.iws
+#______________________________#
+
+# Local-Only Files #
+*.apk
+*.ap_
+*.aab
+*.class
+*.dex
+*.iml
+*.log
+#__________________#
+
+# Generated Folders #
+.gradle/
+.idea/
+.navigation/
+app/release/
+bin/
+build/
+captures/
+gen/
+out/
+proguard/
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+#___________________#
+
+# Local configuration files #
+/local.properties
+vcs.xml
+#___________________________#
+
+# OSX Files #
+.DS_Store
+#___________#
+
+# Keystore Files #
+*.jks
+*.keystore
+#________________#
+
+# NDK #
+*.so
+#_____#
+
+# Extras #
+.externalNativeBuild
+.cxx
+#________#
