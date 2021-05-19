@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GENERAL -->
+    <color name="amaranth">#D81B60</color>
+    <color name="aquaDeep">#00574B</color>
+    <color name="black">#FF000000</color>
+    <color name="teal">#008577</color>
+    <color name="tradewind">#4CB5A6</color>
+    <color name="wildWatermelon">#ff5c8d</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- APP -->
+    <color name="primaryDay">@color/teal</color>
+    <color name="primaryNight">@color/tradewind</color>
+    <color name="primaryVariant">@color/aquaDeep</color>
+    <color name="onPrimary">@color/white</color>
+    <color name="secondary">@color/wildWatermelon</color>
+    <color name="secondaryVariant">@color/amaranth</color>
+    <color name="onSecondary">@color/black</color>
+    <color name="on1ry2ryNight">@color/black</color>
+
+</resources>
