@@ -7,15 +7,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:ignore="MergeRootFrame">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
-        android:name="com.udacity.shoestore.ui.LoginFragment"
-        android:layout_width="@dimen/no_size"
-        android:layout_height="@dimen/no_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="FragmentTagUsage" />
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
 </FrameLayout>

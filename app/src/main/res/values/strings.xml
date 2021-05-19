@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="logout">Logout</string>
+    <string name="next">Next</string>
+
+    <!-- Login UI -->
+    <string name="login">Login</string>
+    <string name="login_fragment">Login Fragment</string>
+    <string name="login_title_for_toolbar">Shoe Store</string>
+
+    <!-- Welcome UI -->
+    <string name="welcome">Welcome</string>
+    <string name="welcome_fragment">Welcome Fragment</string>
+    <string name="welcome_title_for_toolbar">@string/welcome</string>
+
+    <!-- Instructions UI -->
+    <string name="instructions">Instructions</string>
+    <string name="instructions_fragment">Instructions Fragment</string>
+    <string name="instructions_title_for_toolbar">@string/instructions</string>
+
+    <!-- Listing UI -->
+    <string name="listing">Shoes List</string>
+    <string name="listing_fragment">Listing Fragment</string>
+    <string name="listing_title_for_toolbar">@string/listing</string>
+
+    <!-- Detail UI -->
+    <string name="detail">Shoe Detail</string>
+    <string name="detail_fragment">Detail Fragment</string>
+    <string name="detail_title_for_toolbar">@string/detail</string>
+
 </resources>

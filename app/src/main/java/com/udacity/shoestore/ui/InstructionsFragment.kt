@@ -6,27 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import androidx.navigation.Navigation
 import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.FragmentLoginBinding
+import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 
-class LoginFragment : Fragment() {
+class InstructionsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = DataBindingUtil.inflate<FragmentLoginBinding>(
-            inflater, R.layout.fragment_login, container, false
+        val binding = DataBindingUtil.inflate<FragmentInstructionsBinding>(
+            inflater, R.layout.fragment_instructions, container, false
         )
-        initViews(binding)
+        binding.instructionsNextBtn.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
+                R.id.action_fromInstructions_toListing
+            )
+        )
         return binding.root
-    }
-
-    private fun initViews(binding: FragmentLoginBinding) {
-        binding.loginSignInBtn.setOnClickListener { view -> navigateToWelcome(view) }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,13 +39,9 @@ class LoginFragment : Fragment() {
         (activity as MainActivity).hideFAButton()
     }
 
-    private fun navigateToWelcome(view: View) {
-        view.findNavController().navigate(R.id.action_fromLogin_toWelcome)
-    }
-
     private fun updateToolbarTitle() {
         (activity as MainActivity).supportActionBar?.title = getString(
-            R.string.login_title_for_toolbar
+            R.string.instructions_title_for_toolbar
         )
     }
 
