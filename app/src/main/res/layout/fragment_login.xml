@@ -3,12 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- ConstraintLayout was necessary here for the flexibility, the password -->
+    <!-- field was aligned almost in the center, and the other widgets were    -->
+    <!-- constrained accordingly.                                              -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusable="true"
         android:focusableInTouchMode="true"
         tools:context=".ui.LoginFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginEmailTxtInLay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/no_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/field_horizontal_margin"
+            android:layout_marginEnd="@dimen/field_horizontal_margin"
+            android:layout_marginBottom="@dimen/space_between_fields"
+            android:hint="@string/email"
+            app:boxStrokeColor="@color/secondaryVariant"
+            app:layout_constraintBottom_toTopOf="@+id/loginPasswordTxtInLay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginEmailTxtInEtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@drawable/field_cursor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginPasswordTxtInLay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/no_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/field_horizontal_margin"
+            android:layout_marginEnd="@dimen/field_horizontal_margin"
+            android:hint="@string/password"
+            app:boxStrokeColor="@color/secondaryVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.443"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginPasswordTxtInEtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="@string/login"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/field_cursor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/loginCreateNewLoginBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_new_login"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginPasswordTxtInLay"
+            app:layout_constraintVertical_bias="0.2" />
 
         <Button
             android:id="@+id/loginSignInBtn"
@@ -19,7 +86,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/loginCreateNewLoginBtn"
+            app:layout_constraintVertical_bias="0.155" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

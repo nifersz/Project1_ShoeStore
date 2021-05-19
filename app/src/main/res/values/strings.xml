@@ -7,6 +7,9 @@
     <string name="login">Login</string>
     <string name="login_fragment">Login Fragment</string>
     <string name="login_title_for_toolbar">Shoe Store</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_new_login">Create a new login?</string>
 
     <!-- Welcome UI -->
     <string name="welcome">Welcome</string>

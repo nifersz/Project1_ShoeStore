@@ -2,4 +2,10 @@
     <dimen name="app_margin">16dp</dimen>
 
     <dimen name="no_size">0dp</dimen>
+    <dimen name="tiny_size">2dp</dimen>
+
+    <!-- Login UI -->
+    <dimen name="space_between_fields">32dp</dimen>
+    <dimen name="field_horizontal_margin">24dp</dimen>
+
 </resources>

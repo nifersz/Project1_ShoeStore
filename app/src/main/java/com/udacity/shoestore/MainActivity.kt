@@ -1,7 +1,10 @@
 package com.udacity.shoestore
 
+import android.content.Context
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
@@ -34,6 +37,13 @@ class MainActivity : AppCompatActivity() {
         setupActionBar(navController)
     }
 
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        if (currentFocus != null) {
+            hideKeyboard() // on tap outside ui fields
+        }
+        return super.dispatchTouchEvent(ev)
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfig)
             || super.onSupportNavigateUp()
@@ -54,6 +64,11 @@ class MainActivity : AppCompatActivity() {
 
     fun hideFAButton() {
         floatingAdd.visibility = View.GONE
+    }
+
+    fun hideKeyboard() {
+        (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
+            .hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
     }
 
     fun navigateTo(fragmentNavAction: Int) {
