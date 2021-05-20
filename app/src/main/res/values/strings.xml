@@ -15,11 +15,15 @@
     <string name="welcome">Welcome</string>
     <string name="welcome_fragment">Welcome Fragment</string>
     <string name="welcome_title_for_toolbar">@string/welcome</string>
+    <string name="welcome_text_part_one">In a world full of mobile applications, it is very important to develop relevant user interfaces, with proper design principles.</string>
+    <string name="welcome_text_part_two">Changing environment always open new opportunities, with more mobile hardware being created and available to people, new demanding contexts appear.</string>
 
     <!-- Instructions UI -->
     <string name="instructions">Instructions</string>
     <string name="instructions_fragment">Instructions Fragment</string>
     <string name="instructions_title_for_toolbar">@string/instructions</string>
+    <string name="instructions_text_part_one">The next screen will show a list of all the shoes stored in the application, you can scroll down to see more items.</string>
+    <string name="instructions_text_part_two">You can \'Logout\' tapping at the top right corner, it is possible to create a new shoe by tapping the plus button.</string>
 
     <!-- Listing UI -->
     <string name="listing">Shoes List</string>
