@@ -29,10 +29,18 @@
     <string name="listing">Shoes List</string>
     <string name="listing_fragment">Listing Fragment</string>
     <string name="listing_title_for_toolbar">@string/listing</string>
+    <string name="listing_begin_empty">Shoes list empty. Tap \'+\' button to create a NEW shoe</string>
 
     <!-- Detail UI -->
-    <string name="detail">Shoe Detail</string>
+    <string name="detail">Create New Shoe</string>
     <string name="detail_fragment">Detail Fragment</string>
     <string name="detail_title_for_toolbar">@string/detail</string>
+    <string name="detail_name">Name:</string>
+    <string name="detail_company">Company:</string>
+    <string name="detail_size">Size:</string>
+    <string name="detail_description">Description:</string>
+    <string name="detail_cancel">Cancel</string>
+    <string name="detail_save">Save</string>
+    <string name="detail_not_possible_to_create">Shoe name is blank!</string>
 
 </resources>

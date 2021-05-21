@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- ConstraintLayout was not necessary here because there is not a complex -->
+        <!-- widget positioning, the method 'addView()' will be used to add shoes   -->
+        <!-- that will be shown vertically inside a ScrollView                      -->
+        <LinearLayout
+            android:id="@+id/listingShoesLinLay"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/listing" />
+            android:orientation="vertical" />
 
-    </FrameLayout>
+    </ScrollView>
 
 </layout>

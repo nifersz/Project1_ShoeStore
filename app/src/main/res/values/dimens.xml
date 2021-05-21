@@ -8,4 +8,11 @@
     <dimen name="space_between_fields">32dp</dimen>
     <dimen name="field_horizontal_margin">24dp</dimen>
 
+    <!-- Listing UI -->
+    <dimen name="margin_in_item">8dp</dimen>
+
+    <!-- Detail UI -->
+    <dimen name="space_in_form">8dp</dimen>
+    <dimen name="size_field_width">60dp</dimen>
+
 </resources>
