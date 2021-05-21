@@ -4,7 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.EditorInfo.IME_ACTION_DONE
+import android.view.inputmethod.EditorInfo.IME_ACTION_UNSPECIFIED
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -59,7 +60,7 @@ class LoginFragment : Fragment() {
     private fun pwdActionListener(
         view: View,
         actionId: Int
-    ) = if (actionId == EditorInfo.IME_ACTION_UNSPECIFIED) {
+    ) = if (actionId == IME_ACTION_UNSPECIFIED || actionId == IME_ACTION_DONE) {
         (activity as MainActivity).hideKeyboard()
         navigateToWelcome(view)
         true

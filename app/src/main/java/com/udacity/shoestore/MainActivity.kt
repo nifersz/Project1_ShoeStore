@@ -14,7 +14,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.udacity.shoestore.databinding.ActivityMainBinding
-import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(
             this, R.layout.activity_main
         )
-        Timber.plant(Timber.DebugTree())
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         floatingAdd = binding.fabAdd
